@@ -109,3 +109,10 @@ Inv([0,0])
 coeff_I = ForwardDiff.gradient(Inv,[0,0])
 
 # Now I proceed with the Euler Equation
+
+# I'll proceed as in Ellen's notes
+# we have two equations if we eliminate consumption
+function Labor(x)
+    k1, k2, z, l, g, τ = x
+    m = (ψ*(((kss*exp(k1))^θ)*(((zss*exp(z))*(lss*exp(l)))^(1-θ))-(gss*exp(g))-(gz*gn*(kss*exp(k2)))+(1-δ)*(kss*exp(k1)))/(1-lss*exp(l))) - (1-(τlss*exp(τ)))*(1-θ)* (kss*exp(k1))^θ *(zss*exp(z))^(1-θ)*(lss*exp(l))^(-θ)
+end
